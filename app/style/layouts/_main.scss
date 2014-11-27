@@ -1,0 +1,35 @@
+*{
+	box-sizing:border-box;
+	margin:0;
+	padding:0;
+	-webkit-user-select:none;
+	-ms-user-select:none;
+	user-select:none;
+}
+
+body{
+	font-size:$font-size;
+	font-family: $font-family;
+	color:$dark-grey;
+}
+
+.container{
+	position: relative;
+	width:1080px;
+	height:1550px;
+	background-color:$blue;
+	background: url(../img/bg.png);
+	background-size: 100% auto;
+	padding:0 25px 0 25px;
+	overflow:hidden;
+}
+
+.map-container{
+	height:1113px;
+	position:relative;
+	background: url(../img/bg_map.png);
+}
+
+.hidden{
+	display:none !important;
+}

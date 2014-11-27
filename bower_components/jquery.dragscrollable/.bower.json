@@ -1,0 +1,16 @@
+{
+  "name": "jquery.dragscrollable",
+  "main": "dragscrollable.js",
+  "license": "MIT",
+  "homepage": "https://github.com/mvlandys/jquery.dragscrollable",
+  "_release": "c151fd5832",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "c151fd5832c7273abf1e552f5082e2cc6f162633"
+  },
+  "_source": "https://github.com/mvlandys/jquery.dragscrollable.git",
+  "_target": "*",
+  "_originalSource": "https://github.com/mvlandys/jquery.dragscrollable.git",
+  "_direct": true
+}

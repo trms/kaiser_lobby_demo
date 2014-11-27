@@ -1,0 +1,58 @@
+.directory{
+	float:right;
+	width: 30%;
+	margin-right:5%;
+	margin-top:5%;
+	position: relative;
+	z-index:9;
+	overflow:hidden;
+	text-align: center;
+
+	.title{
+		background-color: $blue;
+		color:white;
+		font-size: 1.4em;
+		padding:1em;
+		border-top-right-radius:15px;
+		border-top-left-radius:15px; 
+	}
+
+
+
+	.listings{
+		max-height: 550px;
+		overflow-y:scroll;
+		border-bottom-right-radius:15px;
+		border-bottom-left-radius:15px; 
+		box-shadow: inset 0 -13px 9px -9px black;
+		-ms-overflow-style: none;
+
+		text-align: left;
+
+		&::-webkit-scrollbar { 
+		    display: none; 
+		}
+	}
+
+	.listing, .warning{
+		padding:1em;
+		background-color:rgba(255,255,255,.6);
+		&:nth-child(even){
+			background-color:rgba(255,255,255,.8);
+		}
+	}
+
+	.warning{
+		color:$orange;
+		font-size:1.2em;
+		font-weight: bold;
+	}
+
+	.up, .down{
+		display: inline-block;
+		margin:1em;
+
+	}
+
+
+}

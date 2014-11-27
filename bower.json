@@ -1,0 +1,22 @@
+{
+  "name": "Kaiser_Lobby_Demo",
+  "version": "0.0.0",
+  "authors": [
+    "Seth Phillips <seth.phillips@trms.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.1"
+  },
+  "devDependencies": {
+    "keyboard": "~1.19.1",
+    "jquery.dragscrollable": "https://github.com/mvlandys/jquery.dragscrollable.git"
+  }
+}
