@@ -12,9 +12,18 @@
 		background-color: $blue;
 		color:white;
 		font-size: 1.4em;
-		padding:1em;
+		padding:1em 0 .5em 0;
 		border-top-right-radius:15px;
-		border-top-left-radius:15px; 
+		border-top-left-radius:15px;
+		line-height:.7em;
+	
+		.tag{
+			font-size: .5em;
+
+			&.hide{
+				visibility: hidden;
+			}
+		} 
 	}
 
 
@@ -34,11 +43,18 @@
 		}
 	}
 
-	.listing, .warning{
+	.listing{
 		padding:1em;
 		background-color:rgba(255,255,255,.6);
+		transition: all 500ms;
+
 		&:nth-child(even){
 			background-color:rgba(255,255,255,.8);
+		}
+
+		&.selected{
+			background-color:rgba(4,150,199,.4);
+			color:white;
 		}
 	}
 

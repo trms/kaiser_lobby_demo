@@ -32,6 +32,23 @@ $(document).ready(function(){
 
 	//
 	//
+	//
+	//Directory title button
+	$('.directory .title').on('click',function(){
+
+		setTag();
+
+		$('#search').val('');
+
+		searchListings();
+
+		resetMap();
+
+	});
+
+
+	//
+	//
 	//check for mouse movement while selecting a department
 
 	$('.listings').on('mousedown','.listing',function(e){
@@ -59,6 +76,11 @@ $(document).ready(function(){
 		
 	});
 
+
+	// 
+	// 
+	// 
+	// Keyboard Stuff
 
 	$('#search').keyboard({
 
@@ -123,7 +145,7 @@ $(document).ready(function(){
 	});
 
 
-	$('#focus').focus();
+	
 
 });
 
@@ -134,12 +156,41 @@ function selectListing(listing){
 
 	var longname = $(listing).attr('data-longname');
 
-	$('.map').not('.active').css({ 'background':'url(img/map/' + map + ')' });
+	$('.listing').removeClass('selected');
 
-	$('.map').toggleClass('active');
+	$(listing).addClass('selected');
+
+	chooseMap(map);
 
 	$('h2').text(longname);
 
+	clearTag()
+
+}
+
+function chooseMap(map){
+	$('.map').not('.active').css({ 'background':'url(img/map/' + map + ')' });
+
+	$('.map').toggleClass('active');
+}
+
+function resetMap(){
+
+	$('listing').removeClass('selected');
+
+	chooseMap('map_full.png');
+
+	$('h2').text('Choose a department below to get started:');
+
+
+}
+
+function clearTag(){
+	$('.title > .tag').removeClass('hide');
+}
+
+function setTag(){
+	$('.title > .tag').addClass('hide');
 }
 
 
@@ -156,6 +207,7 @@ function rotateHeader(){
 
 function searchListings(query){
 
+	if(typeof query === 'undefined') setTag();
 	
 	$.getJSON('/directory',{q:query},function(response){
 
@@ -178,9 +230,11 @@ function createListings(json){
 	});
 
 	if(json.length === 0){
-		var html = '<div class="warning" >No Results</div>';
+		var html = '<div class="listing warning">No Results</div>';
 
 		$('.listings').append(html);
+
+		clearTag()
 	}
 
 	if($('.listings').outerHeight() >= 545){

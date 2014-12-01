@@ -31,7 +31,11 @@
 
 	<div class="directory">
 		
-		<div class="title">Departments</div>
+		<div class="title">
+			Departments<br>
+			<span class="tag hide">(tap to reset)</span>
+		</div>
+		
 		<div class="listings">
 			
 			
